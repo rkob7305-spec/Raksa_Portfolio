@@ -18,7 +18,7 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    src: "/img/MacBook Pro 16 Mockup on a Glossy Black Surface (Mockuuups Studio) (1).png",
+    src: "/img/MacBook Pro 16 Mockup on a Glossy Black Surface (Mockuuups Studio).png",
     alt: "Tropical resort travel website shown on MacBook Pro — glossy black surface",
     title: "Clone Project",
     rule: "UI Design",
@@ -28,7 +28,7 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    src: "/img/Mockup 10 (1).png",
+    src: "/img/Mockup 32.png",
     alt: "Find The Place You'll Love — real estate mobile app on two phones, orange scaffold background",
     title: "Ecommerce",
     rule: "UX/UI Design",
@@ -38,7 +38,7 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    src: "/img/Mockup 15 (1).png",
+    src: "/img/Mockup 15.png",
     alt: "University finder app shown on two phones — blue and white background",
     title: "Education",
     rule: "Project Lead | UX/UI Design | UX Research",
@@ -48,7 +48,7 @@ const projects: Project[] = [
   },
   {
     id: 4,
-    src: "/img/Mockup 31 (1).png",
+    src: "/img/Mockup 31.png",
     alt: "Banking and finance app shown on two phones — dark surface",
     title: "Clone Project",
     rule: "UI Design",
@@ -58,7 +58,7 @@ const projects: Project[] = [
   },
   {
     id: 5,
-    src: "/img/Rectangle 151 (1).png",
+    src: "/img/Rectangle 151.png",
     alt: "Cambodia travel website shown on laptop — dark background",
     title: "Cambo Tour",
     rule: "UX/UI Design",
