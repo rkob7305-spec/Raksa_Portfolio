@@ -68,10 +68,10 @@ const projects: Project[] = [
   },
 ]
 
-function EyeIcon() {
+function SearchIcon() {
   return (
     <Image
-      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Vector-sxP3D210MO7DmNOEQQ9aqULOo5aiJk.png"
+      src="/Icon/search.png"
       alt=""
       width={31}
       height={31}
@@ -111,8 +111,8 @@ function ProjectCard({
       {/* Overlay: centered 289×129px frame with icon → title → rule stacked */}
       <div className="absolute inset-0 flex items-center justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-400">
         <div className="flex flex-col items-center" style={{ width: "289px", gap: "0px" }}>
-          {/* Eye icon — top of frame */}
-          <EyeIcon />
+          {/* Search icon — top of frame */}
+          <SearchIcon />
 
           {/* Title — Unbounded 700 20px/25px */}
           <h3
