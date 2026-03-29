@@ -38,7 +38,7 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Mockup%2015-BU32PJR7Y88agobaww4OK1uNWmRpCQ.png",
+    src: "/img/Mockup 15 (1).png",
     alt: "University finder app shown on two phones — blue and white background",
     title: "Education",
     rule: "Project Lead | UX/UI Design | UX Research",
@@ -48,7 +48,7 @@ const projects: Project[] = [
   },
   {
     id: 4,
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Mockup%2031-brD2Qn37EV43f3VdupTnk3tcNICSSu.png",
+    src: "/img/Mockup 31 (1).png",
     alt: "Banking and finance app shown on two phones — dark surface",
     title: "Clone Project",
     rule: "UI Design",
