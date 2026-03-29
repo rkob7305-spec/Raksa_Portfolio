@@ -1,0 +1,325 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   GLOBAL RESET & NORMALIZATION
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  transition: background-color 0.3s ease;
+  font-family: var(--font-inter);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================================
+   GLOBAL LAYOUT SYSTEM
+   ============================================ */
+
+/* Container - Max width with centered content */
+.container-custom {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .container-custom {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-custom {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* Section spacing system */
+.section-padding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* ============================================
+   FLEXBOX UTILITIES (Browser Compatible)
+   ============================================ */
+
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.flex-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.flex-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+/* ============================================
+   RESPONSIVE GRID SYSTEM
+   ============================================ */
+
+.grid-responsive {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid-responsive {
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-responsive {
+    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============================================
+   TEXT STYLES
+   ============================================ */
+
+.outline-text {
+  -webkit-text-stroke: 2px black;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark .outline-text {
+  -webkit-text-stroke: 2px white;
+}
+
+/* ============================================
+   GLASSMORPHISM EFFECTS
+   ============================================ */
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   BROWSER COMPATIBILITY FIXES
+   ============================================ */
+
+/* Fix for Edge/IE flexbox issues */
+@supports (-ms-ime-align: auto) {
+  .flex-container {
+    display: -ms-flexbox;
+  }
+}
+
+/* Ensure consistent box-sizing */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   SPACING UTILITIES
+   ============================================ */
+
+.spacing-xs { gap: 0.5rem; }
+.spacing-sm { gap: 1rem; }
+.spacing-md { gap: 1.5rem; }
+.spacing-lg { gap: 2rem; }
+.spacing-xl { gap: 3rem; }
+
+/* ============================================
+   ANIMATION UTILITIES
+   ============================================ */
+
+.transition-smooth {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* Fade-up animation */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fade-up {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation classes */
+.animate-fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  -webkit-transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  -webkit-transition: opacity 0.6s ease-out, -webkit-transform 0.6s ease-out;
+}
+
+.animate-fade-up.in-view {
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+}
+
+.animate-fade-in {
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+  -webkit-transition: opacity 0.6s ease-out;
+}
+
+.animate-fade-in.in-view {
+  opacity: 1;
+}
+
+/* Animation delays */
+.animation-delay-200 {
+  transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+}
+
+.animation-delay-300 {
+  transition-delay: 0.3s;
+  -webkit-transition-delay: 0.3s;
+}
+
+.animation-delay-400 {
+  transition-delay: 0.4s;
+  -webkit-transition-delay: 0.4s;
+}
+
+/* ============================================
+   PREVENT LAYOUT SHIFT
+   ============================================ */
+
+.no-wrap {
+  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+}
+
+.prevent-overflow {
+  overflow: hidden;
+  min-width: 0;
+}
+
+/* ============================================
+   RESPONSIVE VISIBILITY
+   ============================================ */
+
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
