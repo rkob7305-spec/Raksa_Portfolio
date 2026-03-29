@@ -58,7 +58,7 @@ const projects: Project[] = [
   },
   {
     id: 5,
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Rectangle%20151-slZ4mWqeyesa4a15zLLmB10nhMYUTk.png",
+    src: "/img/Rectangle 151 (1).png",
     alt: "Cambodia travel website shown on laptop — dark background",
     title: "Cambo Tour",
     rule: "UX/UI Design",
