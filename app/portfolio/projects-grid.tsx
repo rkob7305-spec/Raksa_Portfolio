@@ -18,7 +18,7 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MacBook%20Pro%2016%20Mockup%20on%20a%20Glossy%20Black%20Surface%20%28Mockuuups%20Studio%29-H7TXBC57yrVfVcdgRbFcXFEFxHy6YT.png",
+    src: "/img/MacBook Pro 16 Mockup on a Glossy Black Surface (Mockuuups Studio) (1).png",
     alt: "Tropical resort travel website shown on MacBook Pro — glossy black surface",
     title: "Clone Project",
     rule: "UI Design",
