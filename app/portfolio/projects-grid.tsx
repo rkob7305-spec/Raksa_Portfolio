@@ -28,7 +28,7 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Mockup%2010-n728Jq9u4nrdE3jE4scLmpdEn3PYIq.png",
+    src: "/img/Mockup 10 (1).png",
     alt: "Find The Place You'll Love — real estate mobile app on two phones, orange scaffold background",
     title: "Ecommerce",
     rule: "UX/UI Design",
