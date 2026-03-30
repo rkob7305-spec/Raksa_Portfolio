@@ -149,7 +149,7 @@ function ProjectCard({
         </div>
       </div>
 
-      {/* Mobile Display: title and rule at bottom left with gradient (always visible) */}
+      {/* Mobile Display: title only at bottom left with gradient (always visible) */}
       <div className="absolute bottom-0 left-0 right-0 md:hidden px-4 py-5" style={{
         background: "linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.3) 80%, transparent 100%)"
       }}>
@@ -161,25 +161,11 @@ function ProjectCard({
             fontSize: "clamp(16px, 5vw, 24px)",
             lineHeight: "1.2",
             color: "#FFFFFF",
-            letterSpacing: "-0.01em",
-            marginBottom: "4px"
+            letterSpacing: "-0.01em"
           }}
         >
           {project.title}
         </h3>
-        <p
-          className="text-left"
-          style={{
-            fontFamily: "var(--font-inter, Inter, sans-serif)",
-            fontWeight: 400,
-            fontSize: "clamp(12px, 3vw, 16px)",
-            lineHeight: "1.5",
-            color: "#FFFFFF",
-            opacity: 0.9
-          }}
-        >
-          {project.rule}
-        </p>
       </div>
     </Link>
   )
