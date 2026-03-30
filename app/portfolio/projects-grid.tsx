@@ -109,9 +109,9 @@ function ProjectCard({
         style={{ background: "rgba(93, 75, 75, 0.32)" }}
       />
 
-      {/* Overlay: centered 289×129px frame with icon → title → rule stacked */}
+      {/* Overlay: centered frame with icon → title → rule stacked */}
       <div className="absolute inset-0 flex items-center justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-400">
-        <div className="flex flex-col items-center" style={{ width: "289px", gap: "0px" }}>
+        <div className="flex flex-col items-center px-4" style={{ width: "100%", maxWidth: "289px", gap: "0px" }}>
           {/* Search icon — top of frame */}
           <SearchIcon />
 
@@ -121,10 +121,11 @@ function ProjectCard({
             style={{
               fontFamily: "var(--font-unbounded, sans-serif)",
               fontWeight: 700,
-              fontSize: "clamp(12px, 1.6vw, 20px)",
-              lineHeight: "25px",
+              fontSize: "clamp(14px, 2vw, 20px)",
+              lineHeight: "1.25",
               color: "#FFFFFF",
-              width: "281px",
+              width: "100%",
+              maxWidth: "281px",
             }}
           >
             {project.title}
@@ -132,14 +133,15 @@ function ProjectCard({
 
           {/* Rule — Inter 700 18px/22px */}
           <p
-            className="mt-2"
+            className="mt-2 text-center"
             style={{
               fontFamily: "var(--font-inter, Inter, sans-serif)",
               fontWeight: 700,
-              fontSize: "clamp(10px, 1.4vw, 18px)",
-              lineHeight: "22px",
+              fontSize: "clamp(12px, 1.8vw, 18px)",
+              lineHeight: "1.4",
               color: "#FFFFFF",
-              whiteSpace: "nowrap",
+              whiteSpace: "normal",
+              maxWidth: "90%",
             }}
           >
             Rule: {project.rule}
