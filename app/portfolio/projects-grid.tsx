@@ -150,9 +150,7 @@ function ProjectCard({
       </div>
 
       {/* Mobile Display: title only at bottom left with gradient (always visible) */}
-      <div className="absolute bottom-0 left-0 right-0 md:hidden px-4 py-5" style={{
-        background: "linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.3) 80%, transparent 100%)"
-      }}>
+      <div className="absolute bottom-0 left-0 right-0 md:hidden px-4 py-5">
         <h3
           className="text-left"
           style={{
@@ -161,7 +159,8 @@ function ProjectCard({
             fontSize: "clamp(16px, 5vw, 24px)",
             lineHeight: "1.2",
             color: "#FFFFFF",
-            letterSpacing: "-0.01em"
+            letterSpacing: "-0.01em",
+            textShadow: "0px 2px 8px rgba(0, 0, 0, 0.8)"
           }}
         >
           {project.title}
