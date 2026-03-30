@@ -158,7 +158,7 @@ function ProjectCard({
           style={{
             fontFamily: "var(--font-unbounded, sans-serif)",
             fontWeight: 700,
-            fontSize: "28px",
+            fontSize: "clamp(20px, 6vw, 32px)",
             lineHeight: "1.15",
             color: "#FFFFFF",
             letterSpacing: "-0.01em",
@@ -172,7 +172,7 @@ function ProjectCard({
           style={{
             fontFamily: "var(--font-inter, Inter, sans-serif)",
             fontWeight: 400,
-            fontSize: "15px",
+            fontSize: "clamp(13px, 3.5vw, 18px)",
             lineHeight: "1.6",
             color: "#FFFFFF",
             opacity: 0.95,
