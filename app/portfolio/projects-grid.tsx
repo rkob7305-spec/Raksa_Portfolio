@@ -162,7 +162,10 @@ function ProjectCard({
             lineHeight: "1.15",
             color: "#FFFFFF",
             letterSpacing: "-0.01em",
-            marginBottom: "2px"
+            marginBottom: "2px",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis"
           }}
         >
           {project.title}
@@ -176,10 +179,12 @@ function ProjectCard({
             lineHeight: "1.6",
             color: "#FFFFFF",
             opacity: 0.95,
-            whiteSpace: "pre-line"
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis"
           }}
         >
-          {project.rule.split(' | ').join('\n')}
+          {project.rule}
         </p>
       </div>
     </Link>
