@@ -150,22 +150,19 @@ function ProjectCard({
       </div>
 
       {/* Mobile Display: title and rule at bottom left with gradient (always visible) */}
-      <div className="absolute bottom-0 left-0 right-0 md:hidden px-5 py-6" style={{
-        background: "linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.75) 40%, rgba(0, 0, 0, 0.4) 70%, transparent 100%)"
+      <div className="absolute bottom-0 left-0 right-0 md:hidden px-4 py-5" style={{
+        background: "linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.3) 80%, transparent 100%)"
       }}>
         <h3
           className="text-left"
           style={{
             fontFamily: "var(--font-unbounded, sans-serif)",
             fontWeight: 700,
-            fontSize: "clamp(20px, 6vw, 32px)",
-            lineHeight: "1.15",
+            fontSize: "clamp(16px, 5vw, 24px)",
+            lineHeight: "1.2",
             color: "#FFFFFF",
             letterSpacing: "-0.01em",
-            marginBottom: "2px",
-            whiteSpace: "nowrap",
-            overflow: "hidden",
-            textOverflow: "ellipsis"
+            marginBottom: "4px"
           }}
         >
           {project.title}
@@ -175,13 +172,10 @@ function ProjectCard({
           style={{
             fontFamily: "var(--font-inter, Inter, sans-serif)",
             fontWeight: 400,
-            fontSize: "clamp(13px, 3.5vw, 18px)",
-            lineHeight: "1.6",
+            fontSize: "clamp(12px, 3vw, 16px)",
+            lineHeight: "1.5",
             color: "#FFFFFF",
-            opacity: 0.95,
-            whiteSpace: "nowrap",
-            overflow: "hidden",
-            textOverflow: "ellipsis"
+            opacity: 0.9
           }}
         >
           {project.rule}
