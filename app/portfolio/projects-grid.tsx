@@ -150,18 +150,18 @@ function ProjectCard({
       </div>
 
       {/* Mobile Display: title and rule at bottom left with gradient (always visible) */}
-      <div className="absolute bottom-0 left-0 right-0 md:hidden p-4 pb-6" style={{
-        background: "linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 50%, transparent 100%)"
+      <div className="absolute bottom-0 left-0 right-0 md:hidden px-6 py-8" style={{
+        background: "linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.75) 40%, rgba(0, 0, 0, 0.4) 70%, transparent 100%)"
       }}>
         <h3
-          className="text-left"
+          className="text-left mb-2"
           style={{
             fontFamily: "var(--font-unbounded, sans-serif)",
             fontWeight: 700,
-            fontSize: "18px",
-            lineHeight: "1.3",
+            fontSize: "clamp(24px, 5.5vw, 32px)",
+            lineHeight: "1.2",
             color: "#FFFFFF",
-            marginBottom: "4px"
+            letterSpacing: "-0.02em"
           }}
         >
           {project.title}
@@ -171,10 +171,10 @@ function ProjectCard({
           style={{
             fontFamily: "var(--font-inter, Inter, sans-serif)",
             fontWeight: 400,
-            fontSize: "14px",
-            lineHeight: "1.4",
+            fontSize: "clamp(14px, 3.2vw, 18px)",
+            lineHeight: "1.5",
             color: "#FFFFFF",
-            opacity: 0.9
+            opacity: 0.95
           }}
         >
           {project.rule}
