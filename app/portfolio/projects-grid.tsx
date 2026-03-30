@@ -93,24 +93,24 @@ function ProjectCard({
 }) {
   return (
     <Link href={project.href} className={`group relative overflow-hidden bg-muted cursor-pointer ${className}`}>
-      {/* Image — blurs on hover */}
+      {/* Image — blurs on hover (desktop only) */}
       <Image
         src={project.src}
         alt={project.alt}
         width={project.width}
         height={project.height}
         priority={priority}
-        className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:blur-sm"
+        className="w-full h-full object-cover transition-all duration-500 md:group-hover:scale-105 md:group-hover:blur-sm"
       />
 
-      {/* Scrim: rgba(93,75,75,0.32) per spec */}
+      {/* Scrim: rgba(93,75,75,0.32) per spec (desktop only) */}
       <div
-        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400"
+        className="absolute inset-0 opacity-0 md:group-hover:opacity-100 transition-opacity duration-400"
         style={{ background: "rgba(93, 75, 75, 0.32)" }}
       />
 
-      {/* Overlay: centered frame with icon → title → rule stacked */}
-      <div className="absolute inset-0 flex items-center justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-400">
+      {/* Overlay: centered frame with icon → title → rule stacked (desktop only) */}
+      <div className="hidden md:flex absolute inset-0 items-center justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-400">
         <div className="flex flex-col items-center px-4" style={{ width: "100%", maxWidth: "289px", gap: "0px" }}>
           {/* Search icon — top of frame */}
           <SearchIcon />
@@ -147,6 +147,18 @@ function ProjectCard({
             Rule: {project.rule}
           </p>
         </div>
+      </div>
+
+      {/* Mobile: Show title at bottom */}
+      <div className="md:hidden absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+        <h3
+          className="text-white font-bold text-lg"
+          style={{
+            fontFamily: "var(--font-unbounded, sans-serif)",
+          }}
+        >
+          {project.title}
+        </h3>
       </div>
     </Link>
   )
