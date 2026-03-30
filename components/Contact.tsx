@@ -123,7 +123,7 @@ export default function Contact() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center pt-6 md:pt-8 border-t border-white/10"
         >
-          <p className="text-[12px] md:text-[13px] text-white/40">© 2025 <span style={{ fontFamily: 'Unbounded, sans-serif' }}>Raksa</span>. All rights reserved.</p>
+          <p className="text-[12px] md:text-[13px] text-white/40">© 2026 <span style={{ fontFamily: 'Unbounded, sans-serif' }}>Raksa</span>. All rights reserved.</p>
         </motion.div>
       </div>
     </footer>

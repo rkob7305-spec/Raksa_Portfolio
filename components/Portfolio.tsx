@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 export default function Portfolio() {
@@ -86,21 +86,14 @@ export default function Portfolio() {
         </motion.div>
 
         {/* Portfolio Grid */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeFilter}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
-          >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {/* E-Commerce App - Show in All and Mobile App */}
             {(activeFilter === "All" || activeFilter === "Mobile App") && (
               <Link href="/portfolio/ecommerce-app">
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.1 }}
                   whileHover={{ y: -8 }}
                   className="group cursor-pointer"
@@ -125,7 +118,8 @@ export default function Portfolio() {
               <Link href="/portfolio/education-platform">
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                   whileHover={{ y: -8 }}
                   className="group cursor-pointer"
@@ -150,7 +144,8 @@ export default function Portfolio() {
               <Link href="/portfolio/booking-website">
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: activeFilter === "Website" ? 0.1 : 0.5 }}
                   whileHover={{ y: -8 }}
                   className="group cursor-pointer"
@@ -175,7 +170,8 @@ export default function Portfolio() {
               <Link href="/portfolio/clone-project-2">
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.5 }}
                   whileHover={{ y: -8 }}
                   className="group cursor-pointer"
@@ -200,7 +196,8 @@ export default function Portfolio() {
               <Link href="/portfolio/clone-project">
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.3 }}
                   whileHover={{ y: -8 }}
                   className="group cursor-pointer"
@@ -219,8 +216,7 @@ export default function Portfolio() {
                 </motion.div>
               </Link>
             )}
-          </motion.div>
-        </AnimatePresence>
+        </div>
 
         {/* View All Button */}
         <motion.div

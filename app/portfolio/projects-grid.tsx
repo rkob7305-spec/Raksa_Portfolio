@@ -149,16 +149,24 @@ function ProjectCard({
         </div>
       </div>
 
-      {/* Mobile: Show title at bottom */}
-      <div className="md:hidden absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+      {/* Mobile: Show title and rule at bottom */}
+      <div className="md:hidden absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background via-background/90 to-transparent pt-8 pb-4 px-4">
         <h3
-          className="text-white font-bold text-lg"
+          className="text-foreground font-bold text-base sm:text-lg mb-1"
           style={{
             fontFamily: "var(--font-unbounded, sans-serif)",
           }}
         >
           {project.title}
         </h3>
+        <p
+          className="text-foreground/90 text-sm"
+          style={{
+            fontFamily: "var(--font-inter, Inter, sans-serif)",
+          }}
+        >
+          {project.rule}
+        </p>
       </div>
     </Link>
   )

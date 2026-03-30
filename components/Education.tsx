@@ -66,7 +66,7 @@ export default function Education() {
           <div className="text-center sm:text-left">
             <h3 className="font-medium text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] text-black dark:text-white mb-2" style={{ fontFamily: 'Unbounded, sans-serif' }}>UX/UI Design course</h3>
             <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-black/60 dark:text-white/60 font-normal leading-relaxed">
-              Successfully completed a 20-hour "UX/UI Design" course at IT Academy STEP Institute Cambodia. (January 05 - March 09) 2025
+              Successfully completed a 20-hour "UX/UI Design" course at IT Academy STEP Institute Cambodia. (January 05 - March 09) 2026
             </p>
           </div>
         </motion.div>
@@ -94,7 +94,7 @@ export default function Education() {
               Information Technology. <span className="text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] font-normal italic">(second year)</span>
             </h3>
             <p className="text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-black/60 dark:text-white/60 font-normal leading-relaxed">
-              National University of Management, Phnom Penh. (2025 - Present)
+              National University of Management, Phnom Penh. (2026 - Present)
             </p>
           </div>
         </motion.div>

@@ -432,7 +432,7 @@ function FooterCopyright() {
       transition={{ duration: 0.6, delay: 0.5 }}
     >
       <p className="text-[12px] md:text-[13px] text-white/40">
-        © 2025 <span className="font-unbounded">Raksa</span>. All rights reserved.
+        © 2026 <span className="font-unbounded">Raksa</span>. All rights reserved.
       </p>
     </motion.div>
   );

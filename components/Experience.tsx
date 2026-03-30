@@ -6,22 +6,22 @@ import { useEffect, useState } from "react";
 const experienceItems = [
   {
     side: 'left',
-    year: '2025',
+    year: '2026',
     title: 'Selected to the final round AI For Education Competition (CADT)',
     role: 'Setup Date & Training Data',
     description: '"Collected and labeled image data to train the detection model and integrated it into the prototype. This project focuses on improving solutions to social challenges"',
   },
   {
     side: 'right',
-    year: '2025',
+    year: '2026',
     title: 'Selected to the final round UX/UI Design Competition (NUM)',
     role: 'UX/UI Designer, UX Research & Project Lead',
     description: 'After High School is an educational mobile application designed to help students explore universities and choose suitable majors. In this project, I was responsible for the UX/UI design, where I conducted user research, created user flows, wireframes, and interactive prototypes, and performed usability testing.',
   },
   {
     side: 'left',
-    year: '2025',
-    title: 'Programming-Based Algorithms Challenge 2025 (NUM)',
+    year: '2026',
+    title: 'Programming-Based Algorithms Challenge 2026 (NUM)',
     role: '',
     description: 'Completed The Coding Competition as a team at National University of Management',
   },
