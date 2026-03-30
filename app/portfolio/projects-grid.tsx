@@ -103,14 +103,14 @@ function ProjectCard({
         className="w-full h-full object-cover transition-all duration-500 md:group-hover:scale-105 md:group-hover:blur-sm"
       />
 
-      {/* Scrim: rgba(93,75,75,0.32) per spec (desktop only) */}
+      {/* Scrim: rgba(93,75,75,0.32) per spec (desktop hover only) */}
       <div
-        className="absolute inset-0 opacity-0 md:group-hover:opacity-100 transition-opacity duration-400"
+        className="absolute inset-0 opacity-0 md:group-hover:opacity-100 transition-opacity duration-400 hidden md:block"
         style={{ background: "rgba(93, 75, 75, 0.32)" }}
       />
 
-      {/* Overlay: centered frame with icon → title → rule stacked (desktop only) */}
-      <div className="hidden md:flex absolute inset-0 items-center justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-400">
+      {/* Desktop Overlay: centered frame with icon → title → rule stacked (hover only) */}
+      <div className="absolute inset-0 hidden md:flex items-center justify-center opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-400">
         <div className="flex flex-col items-center px-4" style={{ width: "100%", maxWidth: "289px", gap: "0px" }}>
           {/* Search icon — top of frame */}
           <SearchIcon />
@@ -149,20 +149,32 @@ function ProjectCard({
         </div>
       </div>
 
-      {/* Mobile only: Clean minimal text at bottom */}
-      <div className="md:hidden absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/80 to-transparent pt-16 pb-4 px-4">
+      {/* Mobile Display: title and rule at bottom left with gradient (always visible) */}
+      <div className="absolute bottom-0 left-0 right-0 md:hidden p-4 pb-6" style={{
+        background: "linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 50%, transparent 100%)"
+      }}>
         <h3
-          className="text-white font-bold text-base mb-1 drop-shadow-lg truncate"
+          className="text-left"
           style={{
             fontFamily: "var(--font-unbounded, sans-serif)",
+            fontWeight: 700,
+            fontSize: "18px",
+            lineHeight: "1.3",
+            color: "#FFFFFF",
+            marginBottom: "4px"
           }}
         >
           {project.title}
         </h3>
         <p
-          className="text-white/80 text-xs font-normal drop-shadow-md truncate"
+          className="text-left"
           style={{
             fontFamily: "var(--font-inter, Inter, sans-serif)",
+            fontWeight: 400,
+            fontSize: "14px",
+            lineHeight: "1.4",
+            color: "#FFFFFF",
+            opacity: 0.9
           }}
         >
           {project.rule}
