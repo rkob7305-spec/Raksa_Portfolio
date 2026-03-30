@@ -6,7 +6,7 @@ import PortfolioFooter from "./footer"
 
 export default function PortfolioPage() {
   return (
-    <div className="min-h-screen w-full bg-background">
+    <div className="min-h-screen w-full bg-white dark:bg-black">
       {/* Header Section */}
       <PortfolioHeader />
       
