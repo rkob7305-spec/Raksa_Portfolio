@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Raksa" }],
   creator: "Raksa",
   publisher: "Raksa",
+  verification: {
+    google: "smLhYbOtOAMh8FoB_i08aNFh-qEqs49g5-Gu1cJtq2E",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
